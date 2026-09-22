@@ -22,6 +22,9 @@ section{scroll-margin-top:78px}
 .skip-link:focus{top:12px}
 .site-header{position:fixed;inset:0 0 auto;z-index:50;height:72px;padding:0 var(--gutter);display:flex;align-items:center;justify-content:space-between;background:rgba(255,255,255,.96);border-bottom:1px solid var(--line);backdrop-filter:blur(10px)}
 .brand{font-size:21px;font-weight:850;letter-spacing:-.04em}
+.application-label{margin-left:26px;margin-right:auto;display:flex;align-items:center;gap:10px;font-size:11px;letter-spacing:.04em}
+.application-label strong{font-weight:850}
+.application-label span{color:var(--muted);font-weight:700}
 .site-nav{display:flex;gap:clamp(18px,2.6vw,38px);font-size:13px;font-weight:700}
 .site-nav a{padding:6px 0;border-bottom:2px solid transparent}
 .site-nav a:hover,.site-nav a:focus-visible{color:var(--blue);border-color:var(--blue)}
@@ -52,6 +55,7 @@ section{scroll-margin-top:78px}
 .role-hero-meta dd{margin:6px 0 0;font-size:13px;font-weight:700}
 .role-hero-head.compact{grid-template-columns:1fr}
 .role-hero-head.compact h1{font-size:clamp(40px,5vw,62px)}
+.role-hero-tagline{margin:18px 0 0;color:var(--muted);font-size:17px;font-weight:650;letter-spacing:-.02em}
 .role-experience p strong{display:inline-block;margin-bottom:5px;color:var(--black);font-size:14px}
 .role-qualification-grid{display:grid;grid-template-columns:1fr 1fr;gap:0 42px;margin-top:38px;border-top:1px solid var(--black)}
 .role-qualification-grid article{padding:24px 0;border-bottom:1px solid var(--line)}
@@ -128,6 +132,7 @@ li::before{content:"-";position:absolute;left:0;color:var(--blue)}
   :root{--gutter:20px}
   body{word-break:normal;overflow-wrap:anywhere}
   .site-header{height:64px}
+  .application-label{display:none}
   .menu-button{display:block}
   .site-nav{position:absolute;top:63px;left:0;right:0;padding:20px var(--gutter);flex-direction:column;gap:10px;background:#fff;border-bottom:1px solid var(--black);visibility:hidden;opacity:0;transform:translateY(-8px);transition:.16s ease}
   .site-nav.is-open{visibility:visible;opacity:1;transform:none}
