@@ -36,6 +36,20 @@ section{scroll-margin-top:78px}
 .hero-summary div{padding:21px 0;border-bottom:1px solid var(--line)}
 .hero-summary dt{color:var(--blue);font-size:11px;font-weight:850;letter-spacing:.04em}
 .hero-summary dd{margin:7px 0 0;font-size:18px;font-weight:760;letter-spacing:-.025em}
+.role-hero{padding-top:132px;padding-bottom:86px}
+.role-hero-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(300px,.7fr);gap:clamp(44px,7vw,96px);align-items:end}
+.hero-kicker{margin:0 0 14px;color:var(--muted);font-size:13px;font-weight:700;letter-spacing:.02em}
+.role-hero h1{margin:0;font-size:clamp(42px,4.8vw,64px);line-height:1.18;letter-spacing:-.055em}
+.role-hero-intro{margin:0 0 5px;font-size:17px;line-height:1.9;color:#2c3036}
+.role-experience-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));margin-top:54px;border-top:1px solid var(--black);border-left:1px solid var(--line)}
+.role-experience{min-height:220px;padding:28px 30px 30px;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+.role-experience>span{display:block;margin-bottom:24px;color:var(--blue);font-size:11px;font-weight:850}
+.role-experience h2{margin:0 0 13px;font-size:21px;letter-spacing:-.035em}
+.role-experience p{margin:0;color:var(--muted);font-size:14px;line-height:1.85}
+.role-hero-meta{display:grid;grid-template-columns:1fr 1.4fr 1fr;margin:38px 0 0;border-top:1px solid var(--black)}
+.role-hero-meta div{padding:18px 22px 0 0}
+.role-hero-meta dt{color:var(--blue);font-size:10px;font-weight:850;letter-spacing:.08em}
+.role-hero-meta dd{margin:6px 0 0;font-size:13px;font-weight:700}
 .section{padding-top:104px;padding-bottom:112px;border-bottom:1px solid var(--line)}
 .section-head{display:grid;grid-template-columns:48px 1fr;align-items:end;padding-bottom:24px;border-bottom:2px solid var(--black)}
 .section-head span{margin-bottom:8px;color:var(--blue);font-size:12px;font-weight:850}
@@ -79,8 +93,10 @@ li::before{content:"-";position:absolute;left:0;color:var(--blue)}
 .site-footer{min-height:90px;display:flex;align-items:center;justify-content:space-between;color:var(--muted);font-size:12px}
 .site-footer a{color:var(--blue);font-weight:750}
 @media (max-width:900px){
-  .hero-grid,.summary-grid{grid-template-columns:1fr}
+  .hero-grid,.summary-grid,.role-hero-head{grid-template-columns:1fr}
   .hero-summary{display:grid;grid-template-columns:repeat(3,1fr)}
+  .role-experience-grid{grid-template-columns:1fr 1fr}
+  .role-hero-meta{grid-template-columns:1fr 1fr}
   .hero-summary div{padding-right:16px}
   .career-body,.role-box{margin-left:0}
 }
@@ -95,6 +111,14 @@ li::before{content:"-";position:absolute;left:0;color:var(--blue)}
   .hero h1{font-size:clamp(31px,9.4vw,46px)}
   .hero-copy{font-size:15px}
   .hero-summary{grid-template-columns:1fr}
+  .role-hero{padding-top:104px;padding-bottom:64px}
+  .role-hero h1{font-size:clamp(32px,9vw,44px)}
+  .role-hero-intro{font-size:15px}
+  .role-experience-grid{grid-template-columns:1fr;margin-top:38px}
+  .role-experience{min-height:0;padding:24px 0;border-right:0;border-left:0}
+  .role-experience-grid{border-left:0}
+  .role-hero-meta{grid-template-columns:1fr;margin-top:28px}
+  .role-hero-meta div{padding:15px 0;border-bottom:1px solid var(--line)}
   .section{padding-top:76px;padding-bottom:82px}
   .section-head{grid-template-columns:34px 1fr}
   .section-head h2{font-size:34px}
