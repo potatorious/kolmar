@@ -318,6 +318,71 @@ li::before{content:"-";position:absolute;left:0;color:var(--blue)}
   }
 }
 
+
+/* Role-fit readability pass */
+.fit-content{min-width:0}
+.fit-lead{display:grid;gap:4px}
+.fit-lead strong{font-size:var(--text-md);letter-spacing:-.02em}
+.fit-lead span{color:var(--muted);font-size:var(--text-body)}
+.fit-metrics{display:flex;flex-wrap:wrap;gap:18px 42px;margin-top:14px}
+.fit-metrics>div{display:grid;gap:2px}
+.fit-metrics strong{font-size:var(--text-md);letter-spacing:-.02em}
+.fit-metrics span{color:var(--muted);font-size:var(--text-sm)}
+.brand-inline{display:flex;flex-wrap:wrap;gap:12px 34px;padding-bottom:13px;border-bottom:1px solid var(--line)}
+.brand-inline>span{display:flex;align-items:baseline;gap:10px}
+.brand-inline strong{font-size:var(--text-md)}
+.brand-inline em{color:var(--muted);font-size:var(--text-sm);font-style:normal}
+.fit-process{margin:14px 0 0!important;color:var(--black)!important;font-weight:750}
+.fit-detail{margin:5px 0 0!important;color:var(--muted)!important}
+.stakeholder-grid{display:grid}
+.stakeholder-grid>div{display:grid;gap:5px}
+.stakeholder-grid strong{font-size:var(--text-body)}
+.stakeholder-grid span{color:var(--muted);font-size:var(--text-sm);line-height:1.65}
+
+@media (min-width:901px){
+  .role-experience{
+    grid-template-columns:42px 330px minmax(0,1fr);
+    column-gap:32px;
+    padding:34px 0;
+  }
+  .role-experience h2{
+    font-size:26px;
+    line-height:1.35;
+    letter-spacing:-.035em;
+    white-space:nowrap;
+  }
+  .fit-no{
+    padding-top:4px;
+  }
+  .fit-content{
+    align-self:center;
+  }
+  .fit-lead{
+    grid-template-columns:190px minmax(0,1fr);
+    align-items:baseline;
+    column-gap:22px;
+  }
+  .fit-metrics{
+    padding-top:13px;
+    border-top:1px solid var(--line);
+  }
+  .brand-inline{
+    margin-bottom:3px;
+  }
+  .stakeholder-grid{
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    gap:28px;
+  }
+  .stakeholder-grid>div{
+    padding-left:18px;
+    border-left:2px solid var(--line);
+  }
+  .stakeholder-grid>div:first-child{
+    padding-left:0;
+    border-left:0;
+  }
+}
+
 @media (max-width:900px){
   .hero-grid,.summary-grid,.role-hero-head{grid-template-columns:1fr}
   .role-hero-head.compact h1{white-space:normal}
@@ -327,6 +392,11 @@ li::before{content:"-";position:absolute;left:0;color:var(--blue)}
   .role-qualification-grid{grid-template-columns:1fr 1fr}
   .hero-summary div{padding-right:16px}
   .career-body,.role-box{margin-left:0}
+}
+@media (max-width:900px){
+  .fit-lead{gap:5px}
+  .fit-metrics{gap:14px 28px}
+  .stakeholder-grid{gap:14px}
 }
 @media (max-width:700px){
   :root{
@@ -350,8 +420,13 @@ li::before{content:"-";position:absolute;left:0;color:var(--blue)}
   .hero-summary{grid-template-columns:1fr}
   .role-hero{padding-top:104px;padding-bottom:64px}
   .role-experience-grid{grid-template-columns:1fr;margin-top:38px}
-  .role-experience{min-height:0;padding:24px 0;border-right:0;border-left:0}
+  .role-experience{display:block;min-height:0;padding:26px 0;border-right:0;border-left:0}
   .role-experience-grid{border-left:0}
+  .role-experience h2{margin:8px 0 14px;white-space:normal}
+  .fit-lead{display:grid;grid-template-columns:1fr;gap:4px}
+  .fit-metrics{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px;padding-top:12px;border-top:1px solid var(--line)}
+  .brand-inline{gap:8px 22px}
+  .stakeholder-grid{grid-template-columns:1fr;gap:12px}
   .role-hero-meta{grid-template-columns:1fr;margin-top:28px}
   .role-qualification-grid{grid-template-columns:1fr;margin-top:28px}
   .brand-pair,.credential-list{grid-template-columns:1fr}
