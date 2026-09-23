@@ -332,7 +332,7 @@ li::before{content:"-";position:absolute;left:0;color:var(--blue)}
 /* Role-fit readability pass */
 .fit-content{min-width:0}
 .fit-lead{display:grid;gap:4px}
-.fit-lead strong{font-size:var(--text-md);letter-spacing:-.02em}
+.fit-lead strong{font-size:var(--text-md);letter-spacing:-.02em;white-space:nowrap}
 .fit-lead span{color:var(--muted);font-size:var(--text-body)}
 .fit-metrics{display:flex;flex-wrap:wrap;gap:18px 42px;margin-top:14px}
 .fit-metrics>div{display:grid;gap:2px}
@@ -368,7 +368,7 @@ li::before{content:"-";position:absolute;left:0;color:var(--blue)}
     align-self:center;
   }
   .fit-lead{
-    grid-template-columns:190px minmax(0,1fr);
+    grid-template-columns:max-content minmax(0,1fr);
     align-items:baseline;
     column-gap:22px;
   }
