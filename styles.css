@@ -10,7 +10,7 @@
   --sans:Pretendard,"Noto Sans KR","Apple SD Gothic Neo","Malgun Gothic",Arial,sans-serif;
 
   /* Global type scale */
-  --text-xs:12px;
+  --text-xs:13px;
   --text-sm:14px;
   --text-body:16px;
   --text-md:18px;
@@ -422,7 +422,7 @@ li::before{content:"-";position:absolute;left:0;color:var(--blue)}
 @media (max-width:700px){
   :root{
     --gutter:20px;
-    --text-xs:11px;
+    --text-xs:12px;
     --text-sm:13px;
     --text-body:15px;
     --text-md:16px;
