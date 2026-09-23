@@ -338,6 +338,10 @@ li::before{content:"-";position:absolute;left:0;color:var(--blue)}
 
 /* Role-fit readability pass */
 .fit-content{min-width:0}
+.fit-market-lines{display:grid;gap:6px}
+.fit-market-lines>div{display:grid;grid-template-columns:max-content minmax(0,1fr);align-items:baseline;column-gap:22px}
+.fit-market-lines strong{font-size:var(--text-md);letter-spacing:-.02em;white-space:nowrap}
+.fit-market-lines span{color:var(--muted);font-size:var(--text-body)}
 .fit-lead{display:grid;gap:4px}
 .fit-lead strong{font-size:var(--text-md);letter-spacing:-.02em;white-space:nowrap}
 .fit-lead span{color:var(--muted);font-size:var(--text-body)}
@@ -440,6 +444,8 @@ li::before{content:"-";position:absolute;left:0;color:var(--blue)}
   .role-experience{display:block;min-height:0;padding:26px 0;border-right:0;border-left:0}
   .role-experience-grid{border-left:0}
   .role-experience h2{margin:8px 0 14px;white-space:normal}
+  .fit-market-lines>div{grid-template-columns:1fr;gap:2px}
+  .fit-market-lines strong{white-space:normal}
   .fit-lead{display:grid;grid-template-columns:1fr;gap:4px}
   .fit-metrics{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px;padding-top:12px;border-top:1px solid var(--line)}
   .brand-inline{gap:8px 22px}
