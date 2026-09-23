@@ -34,7 +34,8 @@ section{scroll-margin-top:78px}
 .brand{font-size:var(--text-lg);font-weight:850;letter-spacing:-.04em}
 .application-label{margin-left:26px;margin-right:auto;display:flex;align-items:center;gap:10px;font-size:var(--text-sm);letter-spacing:.04em}
 .application-label strong{font-weight:850}
-.application-label .application-role{color:var(--muted);font-weight:700}\n.application-label .application-divider{color:var(--line);font-weight:700}
+.application-label .application-role{color:var(--muted);font-weight:700}
+.application-label .application-divider{color:var(--line);font-weight:700}
 .site-nav{display:flex;gap:clamp(18px,2.6vw,38px);font-size:var(--text-sm);font-weight:700}
 .site-nav a{padding:6px 0;border-bottom:2px solid transparent}
 .site-nav a:hover,.site-nav a:focus-visible{color:var(--blue);border-color:var(--blue)}
@@ -144,27 +145,55 @@ li::before{content:"-";position:absolute;left:0;color:var(--blue)}
     font-size:var(--text-xs);
   }
   .role-hero-head.compact h1{
-    font-size:var(--text-display);
+    font-size:clamp(42px,3.6vw,56px);
     line-height:1.08;
     letter-spacing:-.045em;
+    white-space:nowrap;
   }
   .role-hero-tagline{
     margin-top:14px;
     font-size:var(--text-body);
   }
   .role-experience-grid{
+    grid-template-columns:1fr;
     margin-top:38px;
+    border-left:0;
   }
   .role-experience{
+    display:grid;
+    grid-template-columns:48px 300px minmax(0,1fr);
+    column-gap:28px;
+    row-gap:10px;
+    align-items:start;
     min-height:0;
-    padding:30px 32px 32px;
+    padding:30px 0;
+    border-right:0;
+    border-bottom:1px solid var(--line);
   }
   .role-experience>span{
-    margin-bottom:18px;
+    grid-column:1;
+    grid-row:1 / span 2;
+    margin:3px 0 0;
+  }
+  .role-experience h2{
+    grid-column:2;
+    grid-row:1 / span 2;
+    margin:0;
+    padding-right:18px;
+  }
+  .role-experience>p,
+  .role-experience>.stakeholder-list,
+  .role-experience>.brand-pair{
+    grid-column:3;
+  }
+  .role-experience>.role-outcomes{
+    grid-column:3;
+    margin-top:4px;
+  }
+  .role-experience>span{
     font-size:var(--text-xs);
   }
   .role-experience h2{
-    margin-bottom:14px;
     font-size:var(--text-lg);
   }
   .role-experience p{
@@ -291,6 +320,7 @@ li::before{content:"-";position:absolute;left:0;color:var(--blue)}
 
 @media (max-width:900px){
   .hero-grid,.summary-grid,.role-hero-head{grid-template-columns:1fr}
+  .role-hero-head.compact h1{white-space:normal}
   .hero-summary{display:grid;grid-template-columns:repeat(3,1fr)}
   .role-experience-grid{grid-template-columns:1fr 1fr}
   .role-hero-meta{grid-template-columns:1fr 1fr}
