@@ -88,6 +88,13 @@ section{scroll-margin-top:78px}
 .credential-list time{color:var(--muted);font-size:var(--text-xs)}
 .oa-list{display:grid;gap:6px;margin-top:2px}
 .oa-list strong{font-size:var(--text-body);line-height:1.5}
+.qualification-card{min-width:0}
+.qualification-label{display:block}
+.certification-links{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:18px}
+.certification-links a{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:12px 14px;border:1px solid var(--line);transition:.15s ease}
+.certification-links a:hover,.certification-links a:focus-visible{border-color:var(--blue);color:var(--blue)}
+.certification-links span{margin:0;color:inherit;font-size:var(--text-sm);font-weight:800;letter-spacing:0}
+.certification-links small{flex:none;color:var(--muted);font-size:var(--text-xs);font-weight:700}
 .section{padding-top:104px;padding-bottom:112px;border-bottom:1px solid var(--line)}
 .section-head{display:grid;grid-template-columns:48px 1fr;align-items:end;padding-bottom:24px;border-bottom:2px solid var(--black)}
 .section-head span{margin-bottom:8px;color:var(--blue);font-size:var(--text-xs);font-weight:850}
@@ -228,7 +235,8 @@ li::before{content:"-";position:absolute;left:0;color:var(--blue)}
     gap:14px;
   }
   .role-qualification-grid{
-    gap:0 56px;
+    grid-template-columns:minmax(300px,.8fr) minmax(0,1.2fr);
+    gap:0 64px;
     margin-top:30px;
   }
   .role-qualification-grid article{
@@ -241,6 +249,11 @@ li::before{content:"-";position:absolute;left:0;color:var(--blue)}
     font-size:var(--text-sm);
     line-height:1.7;
   }
+  .credential-list{grid-template-columns:1fr 1fr;gap:18px}
+  .credential-list div{padding:13px 0}
+  .credential-list strong{font-size:var(--text-md)}
+  .oa-list{grid-template-columns:1fr 1fr;gap:8px 28px}
+  .oa-list strong{padding:2px 0}
 
   #scope{
     padding-top:72px;
@@ -430,6 +443,7 @@ li::before{content:"-";position:absolute;left:0;color:var(--blue)}
   .role-hero-meta{grid-template-columns:1fr;margin-top:28px}
   .role-qualification-grid{grid-template-columns:1fr;margin-top:28px}
   .brand-pair,.credential-list{grid-template-columns:1fr}
+  .oa-list,.certification-links{grid-template-columns:1fr}
   .role-hero-meta div{padding:15px 0;border-bottom:1px solid var(--line)}
   .section{padding-top:76px;padding-bottom:82px}
   .section-head{grid-template-columns:34px 1fr}
