@@ -119,6 +119,166 @@ li::before{content:"-";position:absolute;left:0;color:var(--blue)}
 .tool-grid p{margin:0;color:var(--muted);font-size:14px}
 .site-footer{min-height:90px;display:flex;align-items:center;justify-content:space-between;color:var(--muted);font-size:12px}
 .site-footer a{color:var(--blue);font-weight:750}
+@media (min-width:901px){
+  :root{
+    --max:1380px;
+    --gutter:clamp(28px,3vw,48px);
+  }
+
+  .role-hero{
+    padding-top:112px;
+    padding-bottom:72px;
+  }
+  .eyebrow{
+    margin-bottom:20px;
+    font-size:11px;
+  }
+  .role-hero-head.compact h1{
+    font-size:clamp(48px,4vw,58px);
+    line-height:1.08;
+    letter-spacing:-.045em;
+  }
+  .role-hero-tagline{
+    margin-top:14px;
+    font-size:16px;
+  }
+  .role-experience-grid{
+    margin-top:38px;
+  }
+  .role-experience{
+    min-height:0;
+    padding:30px 32px 32px;
+  }
+  .role-experience>span{
+    margin-bottom:18px;
+    font-size:11px;
+  }
+  .role-experience h2{
+    margin-bottom:14px;
+    font-size:24px;
+  }
+  .role-experience p{
+    font-size:15.5px;
+    line-height:1.72;
+  }
+  .role-experience p strong{
+    font-size:15.5px;
+  }
+  .role-outcomes{
+    margin-top:16px;
+    padding-top:14px;
+  }
+  .role-outcomes b{
+    font-size:14px;
+    line-height:1.6;
+  }
+  .brand-pair{
+    gap:14px;
+    margin:6px 0 18px;
+  }
+  .brand-pair div{
+    padding:14px 16px;
+  }
+  .brand-pair strong{
+    font-size:15px;
+  }
+  .brand-pair small{
+    font-size:12px;
+  }
+  .stakeholder-list{
+    gap:14px;
+  }
+  .role-qualification-grid{
+    gap:0 56px;
+    margin-top:30px;
+  }
+  .role-qualification-grid article{
+    padding:22px 0;
+  }
+  .role-qualification-grid strong{
+    font-size:15.5px;
+  }
+  .role-qualification-grid p{
+    font-size:14px;
+    line-height:1.7;
+  }
+
+  #scope{
+    padding-top:72px;
+    padding-bottom:80px;
+  }
+  #scope .section-head{
+    padding-bottom:18px;
+  }
+  #scope .section-head h2{
+    font-size:42px;
+  }
+  .market-table{
+    margin-top:32px;
+  }
+  .market-row{
+    grid-template-columns:150px minmax(0,1fr) 185px;
+    gap:24px;
+    padding:12px 0;
+    font-size:15px;
+    line-height:1.5;
+  }
+  .market-head{
+    font-size:11.5px;
+  }
+
+  #career{
+    padding-top:80px;
+  }
+  #career .section-head{
+    padding-bottom:18px;
+  }
+  #career .section-head h2{
+    font-size:42px;
+  }
+  .career-card{
+    padding:44px 0 52px;
+  }
+  .career-title{
+    grid-template-columns:52px 150px minmax(0,1fr);
+    gap:22px;
+  }
+  .career-no{
+    font-size:30px;
+  }
+  .career-meta{
+    font-size:13px;
+  }
+  .career-title h3{
+    font-size:30px;
+    line-height:1.3;
+  }
+  .role-box{
+    margin:24px 0 0 224px;
+    padding:14px 18px;
+    font-size:15px;
+  }
+  .career-body{
+    margin:30px 0 0 224px;
+  }
+  .career-body.two-col{
+    grid-template-columns:minmax(0,1.3fr) minmax(300px,.7fr);
+    gap:54px;
+  }
+  .career-body.single-col{
+    max-width:none;
+  }
+  .career-body h4{
+    font-size:12.5px;
+  }
+  li{
+    padding-top:4px;
+    padding-bottom:4px;
+    font-size:15px;
+    line-height:1.68;
+  }
+}
+
 @media (max-width:900px){
   .hero-grid,.summary-grid,.role-hero-head{grid-template-columns:1fr}
   .hero-summary{display:grid;grid-template-columns:repeat(3,1fr)}
