@@ -115,7 +115,7 @@ section{scroll-margin-top:78px}
 .career-section{padding-bottom:46px}
 .career-card{padding:46px 0 54px;border-bottom:1px solid var(--line)}
 .career-title{display:grid;grid-template-columns:max-content minmax(0,1fr);column-gap:18px;row-gap:16px;align-items:center}
-.career-no{font-size:var(--text-emphasis);font-weight:850;line-height:1;color:var(--blue)}
+.career-no{font-size:var(--text-small);font-weight:850;line-height:1;color:var(--blue)}
 .career-meta{display:flex;flex-direction:row;align-items:center;flex-wrap:wrap;gap:8px 16px;font-size:var(--text-small)}
 .career-meta time{color:var(--muted)}
 .career-meta time,.credential-list time,.market-row>div:last-child,.fit-metrics strong{font-variant-numeric:tabular-nums}
@@ -296,7 +296,7 @@ li::before{content:"-";position:absolute;left:0;color:var(--blue)}
     row-gap:14px;
   }
   .career-no{
-    font-size:var(--text-emphasis);
+    font-size:var(--text-small);
   }
   .career-meta{
     font-size:var(--text-small);
