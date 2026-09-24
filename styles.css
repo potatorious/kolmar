@@ -484,3 +484,77 @@ li::before{content:"-";position:absolute;left:0;color:var(--blue)}
   .career-card{break-inside:avoid}
   a{color:#000}
 }
+
+
+/* Portfolio page */
+.site-nav a[aria-current="page"]{color:var(--blue);border-color:var(--blue)}
+.portfolio-main{padding-top:72px}
+.portfolio-hero{padding-top:78px;padding-bottom:64px;border-bottom:1px solid var(--line)}
+.portfolio-hero .eyebrow{margin-bottom:18px}
+.portfolio-hero h1{margin:0;font-size:var(--text-display);line-height:1.08;letter-spacing:-.045em}
+.portfolio-intro{max-width:920px;margin:18px 0 0;color:var(--muted);font-size:var(--text-emphasis);line-height:1.8}
+.portfolio-meta{display:grid;grid-template-columns:1.35fr .8fr 1.35fr;margin-top:40px;border-top:1px solid var(--black);border-bottom:1px solid var(--line)}
+.portfolio-meta>div{padding:18px 24px 18px 0}
+.portfolio-meta>div+div{padding-left:24px;border-left:1px solid var(--line)}
+.portfolio-meta span{display:block;margin-bottom:5px;color:var(--blue);font-size:var(--text-small);font-weight:850;letter-spacing:.08em}
+.portfolio-meta strong{display:block;font-size:var(--text-body);line-height:1.6}
+.portfolio-gallery{padding-top:68px;padding-bottom:108px}
+.portfolio-pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(38px,5vw,72px);margin-bottom:96px}
+.creative-case{min-width:0}
+.creative-head{display:grid;grid-template-columns:40px minmax(0,1fr);gap:16px;align-items:start;padding-bottom:18px;border-bottom:1px solid var(--black)}
+.creative-head>span{padding-top:5px;color:var(--blue);font-size:var(--text-small);font-weight:850}
+.creative-head p{margin:0 0 4px;color:var(--muted);font-size:var(--text-small);font-weight:750;letter-spacing:.06em}
+.creative-head h2{margin:0;font-size:var(--text-title);line-height:1.28;letter-spacing:-.035em}
+.creative-stack{position:relative;margin-top:28px;overflow:hidden;background:#f7f8fb;border:1px solid var(--line)}
+.creative-stack img{display:block;height:auto;box-shadow:0 16px 42px rgba(11,11,13,.13)}
+.mixed-stack{aspect-ratio:1/1.04}
+.mixed-stack .creative-portrait{position:absolute;z-index:2;top:4%;left:5%;width:54%}
+.mixed-stack .creative-square{position:absolute;z-index:1;right:3%;bottom:5%;width:58%}
+.mixed-stack.reverse .creative-portrait{right:5%;left:auto}
+.mixed-stack.reverse .creative-square{right:auto;left:3%}
+.portrait-duo{aspect-ratio:1/1.04}
+.portrait-duo img{position:absolute;top:4%;left:5%;width:54%}
+.portrait-duo img+img{top:13%;right:5%;left:auto}
+.portrait-duo.reverse img{right:5%;left:auto}
+.portrait-duo.reverse img+img{right:auto;left:5%}
+.wide-case{margin-bottom:96px}
+.wide-case .creative-head{max-width:1120px;margin:0 auto}
+.wide-stack{max-width:1120px;aspect-ratio:1.72/1;margin:28px auto 0}
+.wide-stack .creative-landscape{position:absolute;z-index:1;top:7%;left:4%;width:74%}
+.wide-stack .creative-square{position:absolute;z-index:2;right:4%;bottom:7%;width:39%}
+.wide-stack.reverse .creative-landscape{right:4%;left:auto}
+.wide-stack.reverse .creative-square{right:auto;left:4%}
+.editorial-case{margin-bottom:0}
+.editorial-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin-top:28px}
+.editorial-grid figure{margin:0}
+.editorial-grid img{display:block;width:100%;height:auto;border:1px solid var(--line)}
+.editorial-grid figcaption{padding-top:10px;color:var(--muted);font-size:var(--text-small);font-weight:700}
+
+@media (max-width:900px){
+  .portfolio-meta{grid-template-columns:1fr}
+  .portfolio-meta>div{padding:16px 0;border-bottom:1px solid var(--line)}
+  .portfolio-meta>div+div{padding-left:0;border-left:0}
+  .portfolio-pair{grid-template-columns:1fr;gap:72px}
+  .mixed-stack,.portrait-duo{aspect-ratio:1/1.08}
+  .wide-stack{aspect-ratio:1.35/1}
+}
+
+@media (max-width:700px){
+  .portfolio-main{padding-top:64px}
+  .portfolio-hero{padding-top:58px;padding-bottom:48px}
+  .portfolio-intro{font-size:var(--text-body)}
+  .portfolio-gallery{padding-top:52px;padding-bottom:76px}
+  .portfolio-pair{gap:58px;margin-bottom:70px}
+  .creative-head{grid-template-columns:30px 1fr;gap:10px}
+  .creative-stack{margin-top:20px}
+  .mixed-stack,.portrait-duo{aspect-ratio:1/1.16}
+  .mixed-stack .creative-portrait,.portrait-duo img{width:57%}
+  .mixed-stack .creative-square{width:60%}
+  .wide-case{margin-bottom:70px}
+  .wide-stack{aspect-ratio:1/1.05}
+  .wide-stack .creative-landscape{top:5%;left:3%;width:88%}
+  .wide-stack .creative-square{right:3%;bottom:5%;width:50%}
+  .wide-stack.reverse .creative-landscape{right:3%;left:auto}
+  .wide-stack.reverse .creative-square{right:auto;left:3%}
+  .editorial-grid{grid-template-columns:1fr;gap:34px}
+}
