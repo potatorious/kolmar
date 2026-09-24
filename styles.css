@@ -350,6 +350,11 @@ li::before{content:"-";position:absolute;left:0;color:var(--blue)}
 .fit-lead span{color:var(--muted);font-size:var(--text-body)}
 .fit-metrics{display:flex;flex-wrap:wrap;gap:18px 42px;margin-top:14px}
 .fit-metrics>div{display:grid;gap:2px}
+.proof-link{display:grid;gap:2px;width:max-content;max-width:100%;text-decoration:none}
+.proof-link strong{display:inline-block;width:max-content;border-bottom:1px solid currentColor;transition:color .15s ease,border-color .15s ease}
+.proof-link:hover strong,.proof-link:focus-visible strong{color:var(--blue)}
+.proof-link:focus-visible{outline:2px solid var(--blue);outline-offset:4px}
+.proof-link .external-mark{display:inline;color:inherit;font-size:.82em;font-weight:850;vertical-align:.08em}
 .fit-metrics strong{font-size:var(--text-emphasis);letter-spacing:-.02em}
 .fit-metrics span{color:var(--muted);font-size:var(--text-small)}
 .brand-inline{display:flex;flex-wrap:wrap;gap:12px 34px;padding-bottom:13px;border-bottom:1px solid var(--line)}
