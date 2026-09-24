@@ -15,10 +15,9 @@
   --text-accent:14px;
   --text-body:16px;
   --text-md:18px;
-  --text-lg:24px;
-  --text-xl:30px;
-  --text-section:clamp(38px,3vw,46px);
-  --text-display:clamp(48px,4vw,58px);
+  --text-title:26px;
+  --text-section:clamp(40px,3vw,46px);
+  --text-display:clamp(48px,4vw,56px);
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -32,7 +31,7 @@ section{scroll-margin-top:78px}
 .skip-link{position:fixed;top:-60px;left:12px;z-index:100;padding:10px 14px;background:var(--blue);color:#fff;font-weight:700}
 .skip-link:focus{top:12px}
 .site-header{position:fixed;inset:0 0 auto;z-index:50;height:72px;padding:0 var(--gutter);display:flex;align-items:center;justify-content:space-between;background:rgba(255,255,255,.96);border-bottom:1px solid var(--line);backdrop-filter:blur(10px)}
-.brand{font-size:var(--text-lg);font-weight:850;letter-spacing:-.04em}
+.brand{font-size:var(--text-md);font-weight:850;letter-spacing:-.04em}
 .application-label{margin-left:26px;margin-right:auto;display:flex;align-items:center;gap:10px;font-size:var(--text-sm);letter-spacing:.04em}
 .application-label strong{font-weight:850}
 .application-label .application-role{color:var(--muted);font-weight:700}
@@ -59,7 +58,7 @@ section{scroll-margin-top:78px}
 .role-experience-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));margin-top:54px;border-top:1px solid var(--black);border-left:1px solid var(--line)}
 .role-experience{min-height:220px;padding:28px 30px 30px;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
 .role-experience>span{display:block;margin-bottom:24px;color:var(--blue);font-size:var(--text-accent);font-weight:850}
-.role-experience h2{margin:0 0 13px;font-size:var(--text-lg);letter-spacing:-.035em}
+.role-experience h2{margin:0 0 13px;font-size:var(--text-title);letter-spacing:-.035em}
 .role-experience p{margin:0;color:var(--muted);font-size:var(--text-body);line-height:1.85}
 .role-hero-meta{display:grid;grid-template-columns:1fr 1.4fr 1fr;margin:38px 0 0;border-top:1px solid var(--black)}
 .role-hero-meta div{padding:18px 22px 0 0}
@@ -101,13 +100,13 @@ section{scroll-margin-top:78px}
 .section-head span{margin-bottom:8px;color:var(--blue);font-size:var(--text-accent);font-weight:850}
 .section-head h2{margin:0;font-size:var(--text-section);line-height:1.15;letter-spacing:-.055em}
 .summary-grid{display:grid;grid-template-columns:1.18fr .82fr;gap:clamp(48px,8vw,110px);padding-top:56px}
-.summary-main h3{margin:0 0 28px;font-size:var(--text-xl);line-height:1.35;letter-spacing:-.045em}
+.summary-main h3{margin:0 0 28px;font-size:var(--text-title);line-height:1.35;letter-spacing:-.045em}
 .summary-main p{margin:0 0 18px;font-size:var(--text-body)}
 .facts{margin:0;border-top:1px solid var(--black)}
 .facts div{display:grid;grid-template-columns:110px 1fr;gap:18px;padding:20px 0;border-bottom:1px solid var(--line)}
 .facts dt{color:var(--blue);font-size:var(--text-accent);font-weight:850}
 .facts dd{margin:0}
-.facts strong{display:block;font-size:var(--text-lg);letter-spacing:-.04em}
+.facts strong{display:block;font-size:var(--text-title);letter-spacing:-.04em}
 .facts span{display:block;margin-top:4px;color:var(--muted);font-size:var(--text-sm)}
 .market-table{width:min(100%,920px);margin:40px auto 0;border-top:1px solid var(--black)}
 .market-row{display:grid;grid-template-columns:140px 430px 250px;gap:24px;align-items:center;padding:14px 0;border-bottom:1px solid var(--line);font-size:var(--text-body)}
@@ -119,12 +118,12 @@ section{scroll-margin-top:78px}
 .career-section{padding-bottom:46px}
 .career-card{padding:46px 0 54px;border-bottom:1px solid var(--line)}
 .career-title{display:grid;grid-template-columns:max-content minmax(0,1fr);column-gap:18px;row-gap:16px;align-items:center}
-.career-no{font-size:20px;font-weight:850;line-height:1;color:var(--blue)}
+.career-no{font-size:var(--text-md);font-weight:850;line-height:1;color:var(--blue)}
 .career-meta{display:flex;flex-direction:row;align-items:center;flex-wrap:wrap;gap:8px 16px;font-size:var(--text-sm)}
 .career-meta time{color:var(--muted)}
 .career-meta time,.credential-list time,.market-row>div:last-child,.fit-metrics strong{font-variant-numeric:tabular-nums}
 .career-meta span{color:var(--blue);font-size:var(--text-accent);font-weight:800}
-.career-title h3{grid-column:1/-1;margin:0;font-size:var(--text-xl);line-height:1.3;letter-spacing:-.045em}
+.career-title h3{grid-column:1/-1;margin:0;font-size:var(--text-title);line-height:1.3;letter-spacing:-.045em}
 .role-box{margin:22px 0 0;padding:15px 18px;background:var(--soft);box-shadow:inset 3px 0 0 var(--blue);font-size:var(--text-body)}
 .role-box strong{display:block;margin-bottom:4px;color:var(--blue);font-size:var(--text-accent)}
 .career-body{margin:28px 0 0}
@@ -300,14 +299,14 @@ li::before{content:"-";position:absolute;left:0;color:var(--blue)}
     row-gap:14px;
   }
   .career-no{
-    font-size:20px;
+    font-size:var(--text-md);
   }
   .career-meta{
     font-size:var(--text-sm);
   }
   .career-title h3{
     grid-column:1/-1;
-    font-size:28px;
+    font-size:var(--text-title);
     line-height:1.28;
     white-space:nowrap;
   }
@@ -369,7 +368,7 @@ li::before{content:"-";position:absolute;left:0;color:var(--blue)}
     padding:34px 0;
   }
   .role-experience h2{
-    font-size:26px;
+    font-size:var(--text-title);
     line-height:1.35;
     letter-spacing:-.035em;
     white-space:nowrap;
@@ -431,8 +430,7 @@ li::before{content:"-";position:absolute;left:0;color:var(--blue)}
     --text-accent:13px;
     --text-body:15px;
     --text-md:16px;
-    --text-lg:22px;
-    --text-xl:26px;
+    --text-title:24px;
     --text-section:34px;
     --text-display:clamp(32px,9vw,44px);
   }
@@ -470,7 +468,7 @@ li::before{content:"-";position:absolute;left:0;color:var(--blue)}
   .career-card{padding:36px 0 42px}
   .career-title{grid-template-columns:max-content 1fr;gap:10px 14px}
   .career-meta{grid-column:2;flex-wrap:wrap;gap:5px 12px}
-  .career-title h3{grid-column:1/-1;margin-top:4px;white-space:normal;font-size:24px}
+  .career-title h3{grid-column:1/-1;margin-top:4px;white-space:normal;font-size:var(--text-title)}
   .career-body.two-col{grid-template-columns:1fr;gap:26px}
   .tool-grid{grid-template-columns:1fr}
   .site-footer{padding-top:22px;padding-bottom:22px;flex-direction:column;align-items:flex-start;gap:7px}
