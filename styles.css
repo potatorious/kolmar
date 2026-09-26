@@ -499,14 +499,11 @@ li::before{content:"-";position:absolute;left:0;color:var(--blue)}
 .portfolio-meta span{display:block;margin-bottom:5px;color:var(--blue);font-size:var(--text-small);font-weight:850;letter-spacing:.08em}
 .portfolio-meta strong{display:block;font-size:var(--text-body);line-height:1.6}
 .portfolio-gallery{padding-top:68px;padding-bottom:108px}
-.portfolio-section-intro{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:28px 48px;align-items:end;margin-bottom:48px;padding-bottom:24px;border-bottom:1px solid var(--black)}
+.portfolio-section-intro{display:block;margin-bottom:48px;padding-bottom:24px;border-bottom:1px solid var(--black)}
 .portfolio-section-intro--video{margin-top:120px}
 .portfolio-section-copy{min-width:0}
-.portfolio-section-kicker{margin:0 0 8px;color:var(--blue);font-size:var(--text-small);font-weight:850;letter-spacing:.09em}
 .portfolio-section-copy h2{margin:0;font-size:clamp(30px,3vw,46px);line-height:1.06;letter-spacing:-.04em}
-.portfolio-section-copy>p:last-child{max-width:760px;margin:14px 0 0;color:var(--muted);font-size:var(--text-body);line-height:1.7}
-.portfolio-section-tags{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:8px;max-width:460px}
-.portfolio-section-tags span{display:inline-flex;align-items:center;min-height:30px;padding:6px 10px;border:1px solid var(--line);background:#f7f8fb;color:var(--black);font-size:var(--text-small);font-weight:800;letter-spacing:.05em}
+.portfolio-section-copy>p:last-child{margin:10px 0 0;color:var(--muted);font-size:var(--text-body);line-height:1.6}
 .portfolio-pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(38px,5vw,72px);margin-bottom:96px}
 .creative-case{min-width:0}
 .creative-head{display:grid;grid-template-columns:40px minmax(0,1fr);gap:16px;align-items:start;padding-bottom:18px;border-bottom:1px solid var(--black)}
@@ -541,8 +538,6 @@ li::before{content:"-";position:absolute;left:0;color:var(--blue)}
   .portfolio-meta{grid-template-columns:1fr}
   .portfolio-meta>div{padding:16px 0;border-bottom:1px solid var(--line)}
   .portfolio-meta>div+div{padding-left:0;border-left:0}
-  .portfolio-section-intro{grid-template-columns:1fr;align-items:start}
-  .portfolio-section-tags{justify-content:flex-start;max-width:none}
   .portfolio-pair{grid-template-columns:1fr;gap:72px}
   .mixed-stack,.portrait-duo{aspect-ratio:1/1.08}
   .wide-stack{aspect-ratio:1.35/1}
