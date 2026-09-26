@@ -16,37 +16,37 @@ navigation?.querySelectorAll('a').forEach((link) => link.addEventListener('click
 document.addEventListener('keydown', (event) => event.key === 'Escape' && closeMenu());
 
 
-const motionCards = document.querySelectorAll('.motion-card');
-const motionModal = document.querySelector('#motion-modal');
-const motionPlayer = document.querySelector('#motion-player');
-const motionCloseButtons = document.querySelectorAll('[data-motion-close]');
+const videoCards = document.querySelectorAll('.video-card');
+const videoModal = document.querySelector('#video-modal');
+const videoPlayer = document.querySelector('#video-player');
+const videoCloseButtons = document.querySelectorAll('[data-video-close]');
 
-function closeMotionModal() {
-  if (!motionModal || !motionPlayer) return;
-  motionPlayer.pause();
-  motionPlayer.removeAttribute('src');
-  motionPlayer.removeAttribute('poster');
-  motionPlayer.load();
-  motionModal.hidden = true;
-  motionModal.setAttribute('aria-hidden', 'true');
-  document.body.classList.remove('motion-open');
+function closeVideoModal() {
+  if (!videoModal || !videoPlayer) return;
+  videoPlayer.pause();
+  videoPlayer.removeAttribute('src');
+  videoPlayer.removeAttribute('poster');
+  videoPlayer.load();
+  videoModal.hidden = true;
+  videoModal.setAttribute('aria-hidden', 'true');
+  document.body.classList.remove('video-open');
 }
 
-motionCards.forEach((card) => {
+videoCards.forEach((card) => {
   card.addEventListener('click', () => {
-    if (!motionModal || !motionPlayer) return;
-    motionPlayer.src = card.dataset.video || '';
-    motionPlayer.poster = card.dataset.poster || '';
-    motionModal.hidden = false;
-    motionModal.setAttribute('aria-hidden', 'false');
-    document.body.classList.add('motion-open');
-    motionPlayer.load();
-    motionPlayer.play().catch(() => {});
+    if (!videoModal || !videoPlayer) return;
+    videoPlayer.src = card.dataset.video || '';
+    videoPlayer.poster = card.dataset.poster || '';
+    videoModal.hidden = false;
+    videoModal.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('video-open');
+    videoPlayer.load();
+    videoPlayer.play().catch(() => {});
   });
 });
 
-motionCloseButtons.forEach((button) => button.addEventListener('click', closeMotionModal));
+videoCloseButtons.forEach((button) => button.addEventListener('click', closeVideoModal));
 
 document.addEventListener('keydown', (event) => {
-  if (event.key === 'Escape' && motionModal && !motionModal.hidden) closeMotionModal();
+  if (event.key === 'Escape' && videoModal && !videoModal.hidden) closeVideoModal();
 });
