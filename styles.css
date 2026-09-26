@@ -264,8 +264,8 @@ li::before{content:"-";position:absolute;left:0;color:var(--blue)}
     font-size:var(--text-display);
   }
   .market-table{
-    width:min(calc(100% - 48px),920px);
-    margin:30px 0 0 48px;
+    width:min(100%,920px);
+    margin:30px auto 0;
   }
   .market-row{
     grid-template-columns:140px 430px 250px;
