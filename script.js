@@ -19,6 +19,7 @@ document.addEventListener('keydown', (event) => event.key === 'Escape' && closeM
 const videoCards = document.querySelectorAll('.video-card');
 const videoModal = document.querySelector('#video-modal');
 const videoPlayer = document.querySelector('#video-player');
+const videoModalDialog = document.querySelector('.video-modal-dialog');
 const videoCloseButtons = document.querySelectorAll('[data-video-close]');
 
 function closeVideoModal() {
@@ -27,6 +28,7 @@ function closeVideoModal() {
   videoPlayer.removeAttribute('src');
   videoPlayer.removeAttribute('poster');
   videoPlayer.load();
+  videoModalDialog?.classList.remove('video-modal-dialog--square', 'video-modal-dialog--portrait');
   videoModal.hidden = true;
   videoModal.setAttribute('aria-hidden', 'true');
   document.body.classList.remove('video-open');
@@ -35,6 +37,9 @@ function closeVideoModal() {
 videoCards.forEach((card) => {
   card.addEventListener('click', () => {
     if (!videoModal || !videoPlayer) return;
+    const isPortrait = card.classList.contains('video-card--portrait');
+    videoModalDialog?.classList.toggle('video-modal-dialog--portrait', isPortrait);
+    videoModalDialog?.classList.toggle('video-modal-dialog--square', !isPortrait);
     videoPlayer.src = card.dataset.video || '';
     videoPlayer.poster = card.dataset.poster || '';
     videoModal.hidden = false;
