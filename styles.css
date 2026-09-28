@@ -1474,3 +1474,23 @@ body.video-open{overflow:hidden}
     padding:12px;
   }
 }
+
+
+/* Portfolio hero/meta desktop one-line layout */
+@media (min-width: 1100px){
+  .portfolio-intro{
+    max-width:none;
+    white-space:nowrap;
+  }
+
+  .portfolio-meta{
+    grid-template-columns:minmax(0,1.35fr) max-content minmax(0,1.2fr);
+    column-gap:28px;
+    align-items:start;
+  }
+
+  .portfolio-meta strong{
+    white-space:nowrap;
+    font-size:.95em;
+  }
+}
