@@ -22,6 +22,32 @@ const videoPlayer = document.querySelector('#video-player');
 const videoModalDialog = document.querySelector('.video-modal-dialog');
 const videoCloseButtons = document.querySelectorAll('[data-video-close]');
 
+function formatVideoDuration(seconds) {
+  if (!Number.isFinite(seconds) || seconds <= 0) return null;
+  const total = Math.round(seconds);
+  const minutes = Math.floor(total / 60);
+  const secs = total % 60;
+  return `${String(minutes).padStart(2, '0')}:${String(secs).padStart(2, '0')}`;
+}
+
+videoCards.forEach((card) => {
+  const source = card.dataset.video;
+  const badge = card.querySelector('.video-duration');
+  if (!source || !badge) return;
+
+  const probe = document.createElement('video');
+  probe.preload = 'metadata';
+  probe.muted = true;
+  probe.src = source;
+
+  probe.addEventListener('loadedmetadata', () => {
+    const formatted = formatVideoDuration(probe.duration);
+    if (formatted) badge.textContent = formatted;
+    probe.removeAttribute('src');
+    probe.load();
+  }, { once: true });
+});
+
 function closeVideoModal() {
   if (!videoModal || !videoPlayer) return;
   videoPlayer.pause();
